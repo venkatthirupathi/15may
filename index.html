@@ -3,15 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Student management</title>
+    <style>
+        table,th,td{
+            border: 2px solid;
+          
+        }
+        table{
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+            /* padding: 10px; */
+        }
+    </style>
 </head>
 <body>
-    
-<input type="text"   id="rno" placeholder="enter rno">
-<input type="text"   id="name" placeholder="enter name">
-<input type="text"   id="branch" placeholder="enter branch">
-<button      onclick="getData()">Adddata</button>
+    <h1>Student database </h1>
+    <form>
+        <input type="text"    placeholder="rno" id="rno" required >
+        <input type="text"  placeholder="name" id="name" required>
+        <input type="text"  placeholder="branch" id="branch" required>
+    <button id="button">Adddata</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>rno</th>
+                <th>name</th>
+                <th>branch</th>
+                <th>options</th>
+            </tr>
+        </thead>
+        <tbody id="tabody"></tbody>
+    </table>
 
-
+    <script src="script.js"></script>
 </body>
 </html>
