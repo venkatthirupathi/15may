@@ -50,9 +50,9 @@ function addRow(id,rno,name,branch) {
     const branchCell = document.createElement('td');
     branchCell.textContent = branch;
     const eb=document.createElement('button');
-    eb.textContent='edit';
+    eb.innerHTML='&#9998';
     const db=document.createElement('button');
-    db.textContent='delete';
+    db.innerHTML='&#128465';
     eb.addEventListener('click', () => {
         editStudent(id,rno,name,branch);
     });
